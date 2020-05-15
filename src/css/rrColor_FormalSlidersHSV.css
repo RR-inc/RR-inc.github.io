@@ -1,0 +1,130 @@
+
+		._main_box_FormalSlidersHSV_Color{
+			height: 68px;
+			width: 100%;
+			position:relative;
+			float:left;
+			padding: 0px;  
+			clear: both;
+			white-space: prewrap;
+			margin: 0px; 
+		}
+		._main_box_FormalSlidersHSV_Color._use_transparency_FormalSlidersHSV_Color{
+			height: 88px;
+		}
+		
+._mainBack_box_FormalSlidersHSV_Color{
+	position:relative;
+	display:block;
+    height: 100%;
+    width: 100%;
+	margin:0px;
+	padding:0px;
+    text-align: right;
+	padding: 0px;  
+	clear: both;
+	white-space: prewrap;
+	margin: 0px; 
+}
+._back_box_FormalSlidersHSV_Color{
+	position:absolute;
+	overflow:hidden;
+	display:block;
+    height: auto;
+    width: auto;
+	margin:0px;
+	padding:0px;
+			clear: both;
+			white-space: prewrap;
+	left:2px;
+	right:2px;
+	top:2px;
+	bottom:2px;
+	border:2px groove rgba(119,119,119,0.65);
+	border-radius: 10px;
+	box-shadow: rgba(0,0,0,0.65) 0px 1px 5px 0.5px;
+}
+		
+._box_FormalSlidersHSV_Color{
+			border: 0px solid;/* 2px groove rgba(119,119,119,0.65);*/
+			border-radius: 0px;
+		}
+		._boxH_FormalSlidersHSV_Color,
+		._boxS_FormalSlidersHSV_Color,
+		._boxV_FormalSlidersHSV_Color,
+		._boxA_FormalSlidersHSV_Color{
+			width: 100%;
+			height: 20px;
+			clear: both;
+			white-space: prewrap;
+			padding: 0px;  
+			margin: 0px; 
+			position:relative;
+			float:left;
+		}
+._boxA_FormalSlidersHSV_Color{
+	display:none;
+}
+._use_transparency_FormalSlidersHSV_Color ._boxA_FormalSlidersHSV_Color{
+	display:block;
+}
+		._main_box_FormalSlidersHSV_Color ._box_Slider_Color{
+			height: 20px;
+		}
+		._main_box_FormalSlidersHSV_Color ._backBar_Slider_Color{
+			height: 100%;
+			top:-1px;
+			border-radius: 0px;
+			/* troppo? */ 
+			/*
+			background: linear-gradient(to top, rgb(181, 181, 181) 0%, rgb(211, 211, 211) 12%, rgb(181, 181, 181) 30%,rgb(151, 151, 151) 90%,rgb(111, 111, 111) 100%);
+			*/
+			/* troppo? */
+		}
+		._main_box_FormalSlidersHSV_Color ._valBar_Slider_Color{
+			background-color: rgba(64, 64, 64, 0.35);
+			/* troppo? */
+			
+			background: linear-gradient(to bottom, rgba(131, 131, 131,0.35) 0%, rgba(161, 161, 161,0.35) 12%, rgba(131, 131, 131,0.35) 30%,rgba(101, 101, 101,0.35) 90%,rgba(61, 61, 61,0.35) 100%);
+			/*background: linear-gradient(to bottom, rgba(131, 131, 131,0.75) 0%, rgba(161, 161, 161,0.75) 12%, rgba(131, 131, 131,0.75) 30%,rgba(101, 101, 101,0.75) 90%,rgba(61, 61, 61,0.75) 100%);
+			box-shadow: rgba(0,0,0,0.65) 1px 0px 5px 0.5px;
+			*/
+			/* troppo? */
+		}
+		._main_box_FormalSlidersHSV_Color ._valSpan_Slider_Color{
+			border: 0px solid;
+			border-radius: 0px;
+			top:0px;
+			height: 100%;
+			width: 1px;
+			padding: 0px;  
+			margin: 0px; 
+			box-shadow:none;
+			background:rgba(85,85,85,0.55)
+		}
+		._textValueOver_FormalSlidersHSV_Color,
+		._textOver_FormalSlidersHSV_Color{
+			position:absolute;
+			height: 100%;
+			width: auto;
+			padding: 0px;  
+			margin: 0px; 
+			line-height: 20px;
+			font-family: monospace;
+			/*font-weight: bold;*/
+			font-size: 15px;
+			z-index:2;
+		}
+		
+		._textOver_FormalSlidersHSV_Color{
+			text-align: left;
+			left:0px;
+			right:auto;
+			padding-left: 10px;  
+		}
+		._textValueOver_FormalSlidersHSV_Color{
+			text-align: right;
+			right:0px;
+			left:auto;
+			padding-right: 10px;  
+		}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>		
+		<title>rrColor</title>
+		
+		<meta charset="utf-8">
+		<meta http-equiv='cache-control' content='no-cache'> 
+		<meta http-equiv='expires' content='0'> 
+		<meta http-equiv='pragma' content='no-cache'> 
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_Slider.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_SlidersHSL.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_SlidersHSV.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_SlidersRGB.css">
+		
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_NumericSpin.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_Label.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_NumericSpinRGB.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_NumericSpinHSV.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_NumericSpinHSL.css">
+		
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_FormalSlidersHSL.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_FormalSlidersHSV.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_FormalSlidersRGB.css">
+		
+<script src="../src/rrColor.js"></script>
+<style>
+#boxo,
+	.main{
+	position:relative;
+	float:left;
+	margin: 0px; /*2px 10px;*/
+	}
+	p{
+		margin: 2px;
+		padding-left: 10px;
+		line-height: 15px;
+		font-family: monospace;
+		font-weight: bold;
+		font-size: 20px;
+	}
+	
+		#col{   
+			border: 2px groove rgba(115,115,115,0.5);
+			bottom: 0px;
+			left: 40px;
+			margin: 0px;
+			top: auto;
+			border-radius: 50%;
+			position: absolute;
+			width: 36px;
+			height: 36px;
+			box-shadow: black 0px 2px 10px 0px;
+		}
+		#colt{   
+			position: absolute;
+			border: 0px solid;
+			width: 100%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+		}
+		#col1{
+			width: 60px;
+			height: 40px;
+			top: 235px;
+			left: 25px;
+			position: absolute;
+			border: 1px solid #8c8c8c;
+			border-radius: 25px;
+			overflow:hidden;
+			box-shadow: black 0px 2px 10px 0px;
+			background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4gwDADsn2aUIlQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAoSURBVCjPY5w5cyYDNnD27Fms4kwMJIJRDcQAFlzhbWxsPBpK9NMAAFLbB1R8PjeNAAAAAElFTkSuQmCC');
+		}
+		.mainSlides{
+			width: 266px;
+		}
+		
+		.mainRGB{
+			margin-left: 2px;
+			width: 266px;
+			/*width: 133px;*/
+		}
+		body{
+			background:white;
+		}
+		
+.boxoll,
+#boxovv,
+		#num1,
+		#num1a,
+		#num1b,
+		#num,
+		#numb,
+		#numa{
+		    position: relative;
+			float: left;
+			display: block;
+			overflow: hidden;
+			white-space: nowrap;
+			clear: both;
+		}
+		
+.boxo {
+    position: relative;
+    float: left;
+    margin: 0px 5px;
+}
+		
+</style>
+		</head>
+	<body>
+	
+ <div class="main">
+ 
+ <div id="boxoll" >
+ 
+ </div> 
+ 
+ <div id="boxovv" >
+ 
+ </div> 
+ 
+ 
+ </div>
+	
+ <div class="boxo">
+	<p>HSL:</p>
+ <div class="main mainLast">
+ <div id="numb" >
+ 
+ </div> 
+ <div id="num1b" >
+ 
+ </div> 
+ </div> 
+ 
+ <div class="main mainSlides">
+ <div id="box" >
+ 
+ </div> 
+ 
+ <div id="box1" >
+ 
+ </div> 
+ </div> 
+ <div id="box2" >
+ 
+ </div> 
+ </div> 
+ 
+ <div class="boxo">
+	<p>HSV:</p>
+ <div class="main mainLast">
+ <div id="numa" >
+ 
+ </div> 
+ <div id="num1a" >
+ 
+ </div> 
+ </div> 
+	
+ <div class="main mainSlides">
+	
+ <div id="boxv" >
+ 
+ </div> 
+ 
+ <div id="box1v" >
+ 
+ </div> 
+ </div> 
+ <div id="box2v" >
+ 
+ </div> 
+ </div> 
+ 
+ <div class="boxo">
+	<p>RGB:</p>
+ <div class="main mainLast">
+ <div id="num" >
+ 
+ </div> 
+ <div id="num1" >
+ 
+ </div> 
+ </div> 
+ <div class="main mainRGB">
+	
+ <div id="boxRR" >
+ 
+ </div> 
+ 
+ <div id="box1RR" >
+ 
+ </div> 
+ </div> 
+ <div id="box2RR" >
+ 
+ </div> 
+ 
+ </div> 
+ 
+ 
+ 
+ <div id="col1" > 
+ <div id="col" >
+ </div> 
+ <div id="colt" >
+ </div> 
+ </div> 
+<script type="text/javascript">
+var useTransp=true;
+var useTransp1=true;
+var useTranspFormals=true;
+var useTransp2=true;
+var _colorInt=new rrColor.Color();
+
+var manager=new rrColor.Synchronizer();
+manager.addControl(new rrColor.NumericSpinHSV(document.getElementById('numa'),_colorInt,useTransp1));
+manager.addControl(new rrColor.NumericSpinHSV(document.getElementById('num1a'),_colorInt,useTransp1,true,true));
+manager.addControl(new rrColor.NumericSpinHSL(document.getElementById('numb'),_colorInt,useTransp));
+manager.addControl(new rrColor.NumericSpinHSL(document.getElementById('num1b'),_colorInt,useTransp,true,true));
+manager.addControl(new rrColor.NumericSpinRGB(document.getElementById('num'),_colorInt,useTransp2));
+manager.addControl(new rrColor.NumericSpinRGB(document.getElementById('num1'),_colorInt,useTransp2,true));
+manager.addControl(new rrColor.SlidersHSLCtrl(document.getElementById('boxoll'),_colorInt,true,true));
+manager.addControl(new rrColor.SlidersHSVCtrl(document.getElementById('boxovv'),_colorInt,true,true));
+manager.addControl(new rrColor.SlidersHSLCtrl(document.getElementById('box'),_colorInt,useTransp));
+manager.addControl(new rrColor.SlidersHSLCtrl(document.getElementById('box1'),_colorInt,useTransp,true,true));
+manager.addControl(new rrColor.SlidersHSVCtrl(document.getElementById('boxv'),_colorInt,useTransp1));
+manager.addControl(new rrColor.SlidersHSVCtrl(document.getElementById('box1v'),_colorInt,useTransp1,true,true));
+manager.addControl(new rrColor.SlidersRGBCtrl(document.getElementById('boxRR'),_colorInt,useTransp2,false,true));
+manager.addControl(new rrColor.SlidersRGBCtrl(document.getElementById('box1RR'),_colorInt,useTransp2,true,true,true,true));
+
+
+manager.addControl(new rrColor.FormalSlidersHSLCtrl(document.getElementById('box2'),_colorInt,useTranspFormals));
+manager.addControl(new rrColor.FormalSlidersHSVCtrl(document.getElementById('box2v'),_colorInt,useTranspFormals));
+manager.addControl(new rrColor.FormalSlidersRGBCtrl(document.getElementById('box2RR'),_colorInt,useTranspFormals));
+
+
+
+var aggio=function(){
+	document.getElementById('col').style.backgroundColor="rgb("+_colorInt.r+","+_colorInt.g+","+_colorInt.b+")";
+	document.getElementById('colt').style.backgroundColor="rgba("+_colorInt.r+","+_colorInt.g+","+_colorInt.b+","+_colorInt.a+")";	
+};
+manager.onValChange=function(c){
+_colorInt.copy(c);
+		aggio();
+};
+aggio();
+/*var ctrls=[];
+
+var cctrll=new rrColor.NumericSpinRGB(document.getElementById('num'),null,true);
+ ctrls.push(cctrll);
+cctrll=new rrColor.NumericSpinRGB(document.getElementById('num1'),null,true,true);
+ ctrls.push(cctrll);
+
+ var ctrl=new rrColor.SlidersHSLCtrl(document.getElementById('boxoll'),null,true,true);
+ ctrls.push(ctrl);
+ var ctrl=new rrColor.SlidersHSVCtrl(document.getElementById('boxovv'),null,true,true);
+ ctrls.push(ctrl);
+
+
+ var ctrl=new rrColor.SlidersHSLCtrl(document.getElementById('box'),null,true);
+ ctrls.push(ctrl);
+ var ctrl=new rrColor.SlidersHSLCtrl(document.getElementById('box1'),null,true,true,true);
+ ctrls.push(ctrl);
+ 
+ var ctrl=new rrColor.SlidersHSVCtrl(document.getElementById('boxv'),null,true);
+ ctrls.push(ctrl);
+ var ctrl=new rrColor.SlidersHSVCtrl(document.getElementById('box1v'),null,true,true,true);
+ ctrls.push(ctrl);
+ 
+ var ctrl=new rrColor.SlidersRGBCtrl(document.getElementById('boxRR'),null,true,false,true);
+ ctrls.push(ctrl);
+ var ctrl=new rrColor.SlidersRGBCtrl(document.getElementById('box1RR'),null,true,true,true);
+ ctrls.push(ctrl);
+ 
+for(var ii=0;ii<ctrls.length;ii++){
+	ctrls[ii].onValChange=function(v){	
+			aggio(v,0+ii);
+	};
+}
+		var aggio=function(c,ty){
+			for(var ii=0;ii<ctrls.length;ii++){
+				if(ii!=ty)ctrls[ii].setValue(c,false);
+			}
+			document.getElementById('col').style.backgroundColor="rgb("+c.r+","+c.g+","+c.b+")";
+			document.getElementById('colt').style.backgroundColor="rgba("+c.r+","+c.g+","+c.b+","+c.a+")";		
+		};
+	aggio(ctrls[0].getValue());	*/
+</script>
+ 
+	</body>
+</html>

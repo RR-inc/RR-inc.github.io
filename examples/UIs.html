@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>		
+		<title>rrColor</title>
+		
+		<meta charset="utf-8">
+		<meta http-equiv='cache-control' content='no-cache'> 
+		<meta http-equiv='expires' content='0'> 
+		<meta http-equiv='pragma' content='no-cache'> 
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_Slider.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_TabUI.css">
+		
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_Cylinder.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_CircleHSV.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_Circle.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_Cube.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_RectangleHS_L.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_RectangleHS_V.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_RectangleSV_H.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_Rectangles.css">
+		
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_NumericSpin.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_FormalSlidersHSL.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_FormalSlidersHSV.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_FormalSlidersRGB.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_SlidersUI.css">
+		
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_ColorIndicator.css">	
+
+
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_Palette.css">	
+		
+	<!--	<link type="text/css" rel="stylesheet" href="rrColor_SlidersHSL.css">
+		<link type="text/css" rel="stylesheet" href="rrColor_SlidersHSV.css">
+		<link type="text/css" rel="stylesheet" href="rrColor_SlidersRGB.css">
+		
+		<link type="text/css" rel="stylesheet" href="rrColor_NumericSpin.css">
+		<link type="text/css" rel="stylesheet" href="rrColor_Label.css">
+		<link type="text/css" rel="stylesheet" href="rrColor_NumericSpinRGB.css">
+		<link type="text/css" rel="stylesheet" href="rrColor_NumericSpinHSV.css">
+		<link type="text/css" rel="stylesheet" href="rrColor_NumericSpinHSL.css"> -->
+		
+<script src="../src/rrColor.js"></script>
+<style>	
+		
+		
+		#col{
+			width: auto;
+			height: auto;
+			position: absolute;
+			border: 0px solid;
+			border-radius: 10px;
+			
+			top: 15px;
+			left: 240px;
+			border-radius: 10px;
+		}
+		.main{
+			height: auto;
+			width: auto;
+			position:relative;
+			float:left;
+			padding: 0px;  
+			clear: none;
+			white-space: normal;
+			margin: 0px; 
+		}
+		
+		#box{
+			height: auto;
+			width: 225px;
+			position:relative;
+			float:left;
+			padding: 0px;  
+			clear: both;
+			white-space: normal;
+			margin: 0px; 
+		}
+		#box1{
+			height: auto;
+			width: 270px;
+			position:relative;
+			float:left;
+			padding: 0px;  
+			clear: both;
+			white-space: normal;
+			margin: 0px; 
+		}
+		#pal{
+			width: 185px;
+			/* */margin-left:10px;
+		}
+</style>
+		</head>
+	<body>
+ <div class="main" > 
+ <div id="box" class="maino" > 
+ </div> 
+ <div id="box1" class="maino" > 
+	
+ </div> 
+ </div> 
+
+ <div id="pal" class="main" > 
+	
+ </div> 
+ <div id="col" >
+ </div> 
+ 
+<script type="text/javascript">
+
+var manager=new rrColor.Synchronizer();
+manager.addControl(new rrColor.SlidersUICtrl(document.getElementById('box1'),null,true));
+manager.addControl(new rrColor.TabUICtrl(document.getElementById('box')));
+manager.addControl(new rrColor.ColorIndicator(document.getElementById('col')));
+	
+manager.addControl(new rrColor.Palette(document.getElementById('pal'),7));//,250));
+/*
+var aggio=function(c){
+		//var c=tabUI.getValue();
+		document.getElementById('col').style.backgroundColor="rgb("+c.r+","+c.g+","+c.b+")";
+		document.getElementById('colt').style.backgroundColor="rgba("+c.r+","+c.g+","+c.b+","+c.a+")";	
+	};
+	manager.onValChange=function(c){
+			aggio(c);
+	};
+	aggio(manager.getValue());*/
+</script>
+ 
+	</body>
+</html>

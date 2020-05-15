@@ -1,0 +1,95 @@
+._boxButton_RectanglesCtrl{
+	position:relative;
+	float:left;
+	width:100%;
+	/*height:32px;*/
+	margin:0px;
+	padding: 1px 2px 0px 5px;
+}
+._boxContents_RectanglesCtrl{
+	position:relative;
+	float:left;
+	width:100%;
+	height:auto;
+	margin:0px;
+	padding:0px;
+	
+}
+._boxCtrl_RectanglesCtrl{
+	width:100%;
+	margin:0px;
+	padding:0px;
+	z-index:1;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+._boxCtrl_RectanglesCtrl._boxSelect_RectanglesCtrl{
+	z-index:2;
+}
+._buttonCtrl_RectanglesCtrl{
+	width: auto;
+	white-space: nowrap;
+	clear: none;
+	display: inline-block;
+	border: 2px groove rgba(119,119,119,0.65);
+	border-radius: 5px;
+	padding: 0px 6px 0px 4px;
+	margin: 2px 2px;
+	text-align: center;
+	line-height: 19px;
+	font-family: monospace;
+	font-weight: bold;
+	font-size: 15px;
+	cursor: pointer;
+	box-shadow: rgba(0,0,0,0.65) 0px 0px 5px -0.5px;
+	background: linear-gradient(to bottom right, rgba(197,197,197,0.15),rgba(117,117,117,0.15));
+	position: relative;
+	float: left;
+	color: rgb(25,25,25);
+}
+._buttonCtrl_RectanglesCtrl._buttSelect_RectanglesCtrl{
+	border: 3px ridge rgba(153, 153, 153,0.75);
+	margin: 0px 1px;
+	padding: 1px 6px 1px 4px;
+    line-height: 18px;
+	cursor: default;
+	background: linear-gradient(to bottom right, rgba(197,197,197,0.35),rgba(117,117,117,0.35));
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+   /* IE10+ CSS */
+	._buttonCtrl_RectanglesCtrl{
+		padding: 0px 3px 0px 2px;
+	}
+	._buttonCtrl_RectanglesCtrl._buttSelect_RectanglesCtrl{
+		padding: 1px 3px 1px 2px;
+	}
+}
+@supports (-ms-accelerator:true) {
+   /* IE10+ CSS */
+	._buttonCtrl_RectanglesCtrl{
+		padding: 0px 3px 0px 2px;
+	}
+	._buttonCtrl_RectanglesCtrl._buttSelect_RectanglesCtrl{
+		padding: 1px 3px 1px 2px;
+	}
+}
+@supports (-ms-ime-align:auto) {
+   /* IE10+ CSS */
+	._buttonCtrl_RectanglesCtrl{
+		padding: 0px 3px 0px 2px;
+	}
+	._buttonCtrl_RectanglesCtrl._buttSelect_RectanglesCtrl{
+		padding: 1px 3px 1px 2px;
+	}
+}
+._buttonTextOver_RectanglesCtrl{
+   position: absolute;
+	top: 1px;
+	left: 5px;
+	color: rgba(185,185,185,0.65);
+}
+._buttSelect_RectanglesCtrl ._buttonTextOver_RectanglesCtrl{
+    line-height: 18px;
+	top: 1px;
+}

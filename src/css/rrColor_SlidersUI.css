@@ -1,0 +1,158 @@
+
+._buttonRadioExt_SlidersUI_Color{
+    position: relative;
+    width: 11px;
+    height: 11px;
+    clear: none;
+    border-radius: 50%;
+    float: right;
+    margin: 2px 0px 2px 8px;
+    border: 2px outset rgba(127,127,127,0.55);
+    background:transparent;
+    box-shadow: black 0px 0px 3px 0px;
+    box-shadow: rgba(0,0,0,0.75) 0px 0px 3px 1.5px;
+}
+._buttonRadio_SlidersUI_Color{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 7px;
+    height: 7px;
+    clear: none;
+    border-radius: 50%;
+    border: 1px inset rgba(127,127,127,0.55);
+    background: transparent;
+    /* box-shadow: black 0px 0px 3px 0px; */
+}
+
+._selectedButton_SlidersUI_Color ._buttonRadioExt_SlidersUI_Color{
+    background: rgba(185,185,185,0.5);
+}
+._selectedButton_SlidersUI_Color ._buttonRadio_SlidersUI_Color{
+    top: 1px;
+    left: 1px;
+    width: 5px;
+    height: 5px;
+    border: 2px inset rgba(27,27,27,0.55);
+    background: rgba(199, 199, 199, 0.5);
+    box-shadow: rgba(0,0,0,0.75) 0px 0px 3px 0px;
+}
+._button_SlidersUI_Color._selectedButton_SlidersUI_Color{
+color: rgb(10,10,10);
+}
+._textOver_SlidersUI_Color._selectedButton_SlidersUI_Color{
+color: rgba(225,225,225,0.85);
+}
+._MainBox_SlidersUI_Color{
+	height: auto;
+	width: 100%;
+			position: relative;
+			float:left;
+	padding: 0px;
+	margin: 0px;
+	clear: none;
+	white-space: nowrap;
+	left: 1px;
+	top: 1px;
+	right: 5px;
+	bottom: 5px;
+			border: 3px ridge rgba(125,125,125,0.5);
+			box-shadow: rgba(0, 0, 0, 0.6) 3px 3px 5px 0.5px;
+			border-radius: 10px;
+}
+._box_SlidersUI_Color{
+			height: auto;
+			width: 100%;
+			position: relative;
+			float:left;
+			    padding: 3px 0px 0px 5px;
+			overflow: visible;    
+			clear: none;
+			white-space: nowrap;
+			display: inline-flex;
+				z-index: 1;
+		}
+._boxContentMain_SlidersUI_Color{
+			height: auto;
+			width: 100%;
+			padding: 0px;
+			margin: 0px; 
+			position:relative;
+			float:left;
+			border: 0px solid transparent;
+			border-radius: 0px 0px 10px 10px;
+			   /* overflow: visible;*/
+    clear: none;
+    white-space: nowrap;
+    display: inline-flex;
+    z-index: 1;
+	    margin-top: -2px;
+		}
+._boxContent_SlidersUI_Color{
+		    height: auto;
+			width: 100%;
+			    padding: 5px;
+			margin: 0px;
+			overflow: hidden;
+			/*position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;*/
+			position:relative;
+			float:left;
+			margin-top: -1px;
+			z-index: 2;
+		}
+._SlidersCtrl_SlidersUI_Color{
+			height: auto;
+			width: 100%;
+			padding: 0px;
+			margin: 0px; 
+			overflow: hidden;
+			position:relative;
+			float:left;
+			display:none;
+}
+._SlidersCtrl_SlidersUI_Color._selectedSlidersCtrl_SlidersUI_Color{
+display:block;
+}
+._button_SlidersUI_Color{
+	    width: auto;
+    white-space: nowrap;
+    clear: none;
+    display: inline-block;
+   /* border: 2px groove rgba(119,119,119,0.65);
+    border-radius: 5px;*/
+    padding: 0px 6px 0px 4px;
+    margin: 0px 2px;
+    text-align: center;
+      line-height: 19px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    /*box-shadow: rgba(0,0,0,0.65) 0px 0px 5px -0.5px;
+    background: linear-gradient(to bottom right, rgba(197,197,197,0.15),rgba(117,117,117,0.15));*/
+    position: relative;
+    float: left;
+   /* color: rgb(25,25,25);*/
+    color: rgb(65,65,65);
+	background:transparent;
+}
+
+._textOver_SlidersUI_Color{
+position:absolute;
+			height: 100%;
+			width: auto;
+			padding: 0px;  
+			margin: 0px; 
+       line-height: 19px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 15px;
+			z-index:2;
+    top: 1px;
+    left: 5px;
+    color: rgba(185,185,185,0.65);
+}

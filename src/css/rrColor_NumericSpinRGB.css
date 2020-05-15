@@ -1,0 +1,32 @@
+._main_box_NumericSpinRGB_Color{
+	position:relative;
+	float:left;
+	margin: 0px;
+	padding:0px;
+	height:auto;
+	width:auto;
+	overflow:hidden;
+	padding-bottom: 5px;
+	padding-top: 2px;
+}
+._main_box_NumericSpinRGB_Color ._mainBox_container_Numeric_Color{
+	margin: 5px 2px;
+}
+._compact_NumericSpin ._mainBox_container_Numeric_Color,
+._main_box_NumericSpinRGB_Color._compact_NumericSpin ._mainBox_container_Numeric_Color,
+._compact_NumericSpinRGB_Color ._main_box_NumericSpinRGB_Color ._mainBox_container_Numeric_Color{
+	margin: 4px 2px;
+}
+._transparent_NumericSpinRGB_Color{
+	position:relative;
+	float:left;
+	margin: 0px;
+	padding:0px;
+	height:auto;
+	width:auto;
+	clear: both;
+	display:none;
+}
+._use_transparency_NumericSpinRGB_Color ._transparent_NumericSpinRGB_Color{
+	display:block;
+}

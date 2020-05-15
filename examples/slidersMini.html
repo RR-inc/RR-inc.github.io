@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>		
+		<title>rrColor</title>
+		
+		<meta charset="utf-8">
+		<meta http-equiv='cache-control' content='no-cache'> 
+		<meta http-equiv='expires' content='0'> 
+		<meta http-equiv='pragma' content='no-cache'> 
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_Slider.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_SlidersHSL.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_SlidersHSV.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_SlidersRGB.css">
+		
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_NumericSpin.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_Label.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_NumericSpinRGB.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_NumericSpinHSV.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_NumericSpinHSL.css">
+		
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_FormalSlidersHSL.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_FormalSlidersHSV.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_FormalSlidersRGB.css">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_SlidersUI.css">
+		
+<script src="../src/rrColor.js"></script>
+
+<style>
+body{
+    background: #ffffff;
+}
+		#col{   
+			border: 2px groove rgba(115,115,115,0.5);
+			bottom: 0px;
+			left: 40px;
+			margin: 0px;
+			top: auto;
+			border-radius: 50%;
+			position: absolute;
+			width: 36px;
+			height: 36px;
+			box-shadow: black 0px 2px 10px 0px;
+		}
+		#colt{   
+			position: absolute;
+			border: 0px solid;
+			width: 100%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+		}
+		#col1{
+			width: 60px;
+			height: 40px;
+			top: 35px;
+			left: 605px;
+			position: absolute;
+			border: 1px solid #8c8c8c;
+			border-radius: 25px;
+			overflow:hidden;
+			box-shadow: black 0px 2px 10px 0px;
+			background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4gwDADsn2aUIlQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAoSURBVCjPY5w5cyYDNnD27Fms4kwMJIJRDcQAFlzhbWxsPBpK9NMAAFLbB1R8PjeNAAAAAElFTkSuQmCC');
+		}
+		.main,.ctrls{
+			height: auto;
+			width: 270px;
+			position: relative;
+			float: left;
+			padding: 0px;
+			clear: both;
+			white-space: nowrap;
+			margin: 7px;
+		}
+		.bbox{
+			position: relative;
+			float: left;
+			padding: 0px;
+			clear: none;
+			white-space: nowrap;
+			margin: 1px;
+		}
+		
+</style>
+		</head>
+	<body>
+ <div  class="bbox" > 
+ <div id="box" class="main" > 
+	
+ </div> 
+ <div id="box1" class="main" > 
+	
+ </div> 
+ <div id="box2" class="main" > 
+	
+ </div> 
+ <div id="box3" class="main" > 
+	
+ </div> 
+ </div>
+ <div  class="bbox" >  
+ <div id="ctrls" class="main" > 
+ 
+ </div> 
+ </div>
+ <div id="col1" > 
+ <div id="col" >
+ </div> 
+ <div id="colt" >
+ </div> 
+ </div> 
+ 
+<script type="text/javascript">
+
+
+
+var _colorInt=new rrColor.Color();
+	
+var manager=new rrColor.Synchronizer();
+manager.addControl(new rrColor.SlidersUICtrl(document.getElementById('ctrls'),_colorInt,true));
+manager.addControl(new rrColor.FormalSlidersRGBCtrl(document.getElementById('box3'),_colorInt,true));
+manager.addControl(new rrColor.FormalSlidersHSVCtrl(document.getElementById('box2'),_colorInt,true));
+manager.addControl(new rrColor.SlidersHSLCtrl(document.getElementById('box1'),_colorInt,true));
+manager.addControl(new rrColor.FormalSlidersHSLCtrl(document.getElementById('box'),_colorInt,true));
+var aggio=function(){
+		document.getElementById('col').style.backgroundColor="rgb("+_colorInt.r+","+_colorInt.g+","+_colorInt.b+")";
+		document.getElementById('colt').style.backgroundColor="rgba("+_colorInt.r+","+_colorInt.g+","+_colorInt.b+","+_colorInt.a+")";	
+};
+manager.onValChange=function(c){
+_colorInt.copy(c);
+console.info(c);
+			aggio();
+}
+			aggio();
+</script>
+ 
+	</body>
+</html>
