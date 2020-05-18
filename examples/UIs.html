@@ -43,7 +43,31 @@
 		
 <script src="../src/rrColor.js"></script>
 <style>	
-		
+.source {
+    clear: both;
+    position: absolute;
+    float: left;
+    bottom: 20px;
+    left: 15px;
+    opacity: 0.5;
+    color: rgb(100,100,125);
+    border: 2px groove;
+    border-radius: 5px;
+    background: linear-gradient(to Bottom, #00000094 0%, #b5b0b094 15%, #00000094 92%, black);
+    box-shadow: black 2px 2px 5px 1px;
+}
+
+.source>a {
+	font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(32, 32, 41);
+    padding: 0px;
+    margin: 0px;
+    padding: 1px 15px;
+}
+.source>a:hover {
+	background-color: rgba(225,225,180,0.7);
+}
 		
 		#col{
 			width: auto;
@@ -108,6 +132,9 @@
  <div id="col" >
  </div> 
  
+<div class="source">
+	<a title="source" href="https://github.com/RR-inc/RR-inc.github.io/blob/master/examples/UIs.html" target="blank">Source</a>
+</div>
 <script type="text/javascript">
 
 var manager=new rrColor.Synchronizer();
