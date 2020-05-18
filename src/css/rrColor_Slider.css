@@ -1,0 +1,142 @@
+ /*  base slider */
+		._mainbox_Slider_Color{    
+			width: 100%;
+			height: auto;
+			position: absolute;
+			padding: 0px;
+			margin: 0px;
+			top: 0px;
+			overflow: visible;		
+			background: transparent;
+			display: block;
+		}
+		._box_Slider_Color{
+			width: 100%;
+			height: 30px;
+			position: absolute;
+			padding: 0px;
+			margin: 0px;
+			top: 0px;
+			left: 0px;
+			overflow: visible;		
+			background: transparent;
+			display: block;
+		}
+		._backBar_Slider_Color{
+			cursor: pointer;
+			width: 100%;
+			height: 7px;
+			padding: 0px;
+			margin: 0px; 
+			    margin-left: -1px;
+			top: 10px;
+			/*border: 1px solid rgba(55,55,55,0.6);*/
+			border: 1px solid rgba(29, 29, 29, 0.75);
+			overflow:visible;
+			background-color: rgb(181, 181, 181);
+			position: absolute;
+			border-radius: 3px;
+		}
+		._valBar_Slider_Color{
+			padding: 0px;
+			margin: 0px; 
+			cursor: pointer;
+			position: absolute;
+			width: 0%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+			bottom: 0px;
+			/*background-color: rgba(63, 81, 181, 0.55);*/
+			background-color: rgba(64, 64, 64, 0.55);
+		}
+		._valEnd_Slider_Color,
+		._valStart_Slider_Color{
+			padding: 0px;
+			margin: 0px; 
+			position:absolute;
+			width: 1px;
+			height: 1px;
+			display:block;
+			top:4px;
+			z-index:99;
+			bottom:auto;
+			background-color:transparent;
+			border:0px solid;
+		}
+		._valStart_Slider_Color{
+			left:0px;
+			right:auto;
+		}
+		._valEnd_Slider_Color{
+			right:0px;
+			left:auto;
+		}
+		._valSpan_Slider_Color{   
+			cursor: pointer;
+			border: 2px solid #dddddd;
+			box-shadow: #000 0px 0px 5px 1.2px;
+			top: 7px;
+			left: 0px;
+			width: 10px;
+			height: 10px;
+			margin: -10px;
+    margin-left: -7px;
+			position: absolute;
+			z-index: 999;
+			background-color: gray;
+			/*border-style: dashed;*/
+			border-radius: 50%;
+		}	
+		 /*  base slider */
+		 
+		 /*  helpers slider */
+		 		._helper_Slider_Color{
+		    cursor: pointer;
+			width: 20px;
+			position: absolute;
+			z-index: 999;
+			transform: rotate(225deg);
+			height: 20px;
+			left: 50%;
+			margin: 0px -11px;
+			top: -22px;
+			border-radius: 0px 50% 50% 50%;
+			border: 1px groove #777777;
+			box-shadow: #000 0px 0px 5px 0.5px;
+		}
+		._helper_Slider_Fan ._helper_Slider_Color{
+			cursor: pointer;
+			width: 16px;
+			position: absolute;
+			z-index: 1;
+			transform: rotate(225deg);
+			height: 16px;
+			left: 50%;
+			margin: 0px -9px;
+			top: -20px;
+			border-radius: 0px 8px 23px 8px;
+			border: 1px groove #777777;
+			box-shadow: #000 0px 0px 5px 1.2px;
+		}
+		._helper_Slider_Fan  ._helper_Slider_Color_down{
+			transform: rotate(45deg);
+			top:none;
+			top:unset;
+			bottom: -18px;
+		}
+		._helper_Slider_Color_down{
+			transform: rotate(45deg);
+			-ms-transform-origin:-39px 33px;
+			top:none;
+			top:unset;
+			bottom: -21px;
+		}
+		._hide_Helpers_Color ._helper_Slider_Color,
+		._hide_Helpers_Color ._helper_Slider_Fan_Color{
+			display:none;
+		}
+		._helper_Slider_Mid_Color{
+			background: linear-gradient(to right top,#464646 44%, gray 45%, gray 55%,#464646 56%);
+		}
+		 /*  helpers slider */

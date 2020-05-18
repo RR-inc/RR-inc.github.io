@@ -1,0 +1,103 @@
+
+<html lang="en">
+	<head>		
+		<title>rrColor</title>
+		
+		<meta charset="utf-8">
+		<meta http-equiv='cache-control' content='no-cache'> 
+		<meta http-equiv='expires' content='0'> 
+		<meta http-equiv='pragma' content='no-cache'> 
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">	
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_Circle.css">
+			<link type="text/css" rel="stylesheet" href="../src/css/rrColor_Slider.css">		
+			<link type="text/css" rel="stylesheet" href="../src/css/rrColor_SlidersHSL.css">
+		<script src="../src/rrColor.js"></script>
+		<style>
+		
+		#col{   
+			border: 2px groove rgba(115,115,115,0.5);
+			bottom: 0px;
+			left: 40px;
+			margin: 0px;
+			top: auto;
+			border-radius: 50%;
+			position: absolute;
+			width: 36px;
+			height: 36px;
+			box-shadow: black 0px 2px 10px 0px;
+		}
+		#colt{   
+			position: absolute;
+			border: 0px solid;
+			width: 100%;
+			height: 100%;
+			top: 0px;
+			left: 0px;
+		}
+		#col1{
+			width: 60px;
+			height: 40px;
+			top: 235px;
+			left: 25px;
+			position: absolute;
+			border: 1px solid #8c8c8c;
+			border-radius: 25px;
+			overflow:hidden;
+			box-shadow: black 0px 2px 10px 0px;
+			background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH4gwDADsn2aUIlQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAoSURBVCjPY5w5cyYDNnD27Fms4kwMJIJRDcQAFlzhbWxsPBpK9NMAAFLbB1R8PjeNAAAAAElFTkSuQmCC');
+		}
+	#box{
+	display: block;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+#box4{
+    width: 200px;
+   position: relative;
+    float: left;
+}	
+		</style>
+		</head>
+	<body>
+	
+ <div id="box" >
+ 
+ </div> 
+ 
+ <div id="box4" class="slide_Boxes">
+ 
+ </div> 
+ <div id="col1" > 
+ <div id="col" >
+ </div> 
+ <div id="colt" >
+ </div> 
+ </div> 
+ <div id="slid" >
+ 
+ </div> 
+<script type="text/javascript">
+ 
+ var ctrl=new rrColor.CircleTriangleCtrl(document.getElementById('box'),205,30);
+ var ctrlsLIDES=new rrColor.SlidersHSLCtrl(document.getElementById('box4'),null,true,true);
+		var aggio=function(){
+			var c=ctrlsLIDES.getValue();
+			document.getElementById('col').style.backgroundColor="rgb("+c.r+","+c.g+","+c.b+")";
+			document.getElementById('colt').style.backgroundColor="rgba("+c.r+","+c.g+","+c.b+","+c.a+")";		
+		};
+		
+		ctrl.onValChange=function(v){
+			ctrlsLIDES.setValue(v,false);
+			aggio();
+		};
+		ctrlsLIDES.onValChange=function(v){
+			ctrl.setValue(v,false);
+			aggio();
+		};
+		aggio();
+ 
+</script>
+ 
+	</body>
+</html>

@@ -1,0 +1,33 @@
+._main_label_Color{
+    position: relative;
+    float: left;
+    line-height: 23px;
+    font-family: monospace;
+    clear: left;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 6px 2px 0px 0px;
+	color: rgb(25,25,25);
+}
+._duplicBox_label_Color{
+	position: absolute;
+    top: 7px;
+    left: 1px;
+    color: rgba(185,185,185,0.65);
+}
+._compact_Label._main_label_Color{
+    position: relative;
+    float: left;
+    line-height: 20px;
+    font-family: monospace;
+    clear: left;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 4px 2px 0px 0px;
+}
+._compact_Label ._duplicBox_label_Color{
+	position: absolute;
+    top: 5px;
+    left: 1px;
+    color: rgba(185,185,185,0.65);
+}

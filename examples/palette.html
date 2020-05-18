@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>		
+		<title>rrColor</title>
+		
+		<meta charset="utf-8">
+		<meta http-equiv='cache-control' content='no-cache'> 
+		<meta http-equiv='expires' content='0'> 
+		<meta http-equiv='pragma' content='no-cache'> 
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_ColorIndicator.css">	
+		<link type="text/css" rel="stylesheet" href="../src/css/rrColor_Palette.css">	
+<script src="../src/rrColor.js"></script>
+<style>	
+
+		#pal{
+			width: 185px;
+			/* */margin-left:10px;
+		}
+		#col{
+			width: auto;
+			height: auto;
+			position: absolute;
+			border: 0px solid;
+			border-radius: 10px;
+			
+			top: 15px;
+			left: 240px;
+			border-radius: 10px;
+		}
+		
+</style>
+		</head>
+	<body>
+ <div id="pal" class="main" > 
+	
+ </div> 
+ <div id="col" >
+ </div> 
+ 
+<script type="text/javascript">
+var manager=new rrColor.Synchronizer();
+manager.addControl(new rrColor.ColorIndicator(document.getElementById('col')));
+	
+manager.addControl(new rrColor.Palette(document.getElementById('pal'),7));//,250));
+</script>
+ 
+	</body>
+</html>

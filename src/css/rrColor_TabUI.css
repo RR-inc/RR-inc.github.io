@@ -1,0 +1,173 @@
+
+	._MainBoxSpace_TabUI_Color{
+	    height: 265px;
+		width: 100%;
+		position: relative;
+		float: left;
+		margin: 0px;
+		clear: none;
+		white-space: nowrap;
+		padding: 0px;
+	}
+	._MainBox_TabUI_Color{
+	    height: auto;
+		width: auto;
+		position: absolute;
+		margin: 0px;
+		padding: 0px;
+		clear: none;
+		white-space: nowrap;
+		left: 1px;
+		top: 1px;
+		right: 5px;
+		bottom: 5px;
+	}
+	
+		._box_TabUI_Color{
+			height: auto;
+			width: 100%;
+			position: relative;
+			float:left;
+			padding: 0px;
+		padding-top: 3px;
+			overflow: visible;    
+			clear: none;
+			white-space: nowrap;
+			display: inline-flex;
+			/*background: linear-gradient(to top, rgba(125,125,125,0.5) 3px, transparent 1px );
+			    padding-bottom: 1px;*/
+				z-index: 1;
+		}
+		._boxContentMain_TabUI_Color{
+			height: 225px;
+			width: 100%;
+			padding: 0px;
+			margin: 0px; 
+			position:relative;
+			float:left;
+			border: 0px solid transparent;
+			/*box-shadow: rgba(0, 0, 0, 0.6) 3px 3px 5px 0.5px;*/
+			border-radius: 0px 0px 10px 10px;
+		}
+		._boxContent_TabUI_Color{
+		    height: auto;
+			width: auto;
+			padding: 0px;
+			margin: 0px;
+			overflow: hidden;
+			border: 3px ridge rgba(125,125,125,0.5);
+			border-top: 0px solid transparent;
+			border-radius: 0px 0px 10px 10px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			margin-top: -1px;
+			z-index: 2;
+		}
+		._button_TabUI_Color{
+		    height: 26px;
+			width: 38px;
+			border-radius: 10px 10px 0px 0px;
+			border: 3px groove rgba(125,125,125,0.5);
+			border-bottom: 2px groove rgba(125,125,125,0.5);
+			background-position: 50% 50%;
+			background-size: auto 95%;
+			background-repeat: no-repeat;
+			cursor: pointer;
+			margin-bottom: 1px;
+		}
+		._button_TabUI_Color._lastButton_TabUI_Color{
+			/*box-shadow: rgba(0, 0, 0, 0.6) 3px 3px 5px 0.5px;*/
+			border-right-style: ridge; /*forse*/
+		}
+		._shadow_TabUI_Color{
+			height: 255px;
+			width: 100%;
+			position: absolute;
+			top: 5px;
+			left: 0px;
+			padding: 0px;
+			margin: 0px;
+			color: transparent;
+			border-radius: 13px;
+			background: transparent;
+			box-shadow: rgba(0, 0, 0, 0.6) 3px 3px 5px 0.5px;
+		}
+		._shadow_TabUI_Color._lastTabSel_TabUI_Color{
+			top: 2px;
+			height: 258px;
+		}
+		._button_TabUI_Color._firstButton_TabUI_Color{
+			border-right-style: ridge; /*forse*/
+		}
+		._button_TabUI_Color._firstButton_TabUI_Color._selectedButton_TabUI_Color,
+		._button_TabUI_Color._lastButton_TabUI_Color._selectedButton_TabUI_Color,
+		._button_TabUI_Color._selectedButton_TabUI_Color{    
+			border-style: ridge;
+			border-bottom-color: transparent;
+			border-bottom: 0px ridge transparent;
+/*			box-shadow: rgba(0, 0, 0, 0.6) 3px 3px 5px 0.5px;*/
+			height: 31px;
+			z-index: 1;
+			margin-top: -3px;
+			width: 43px;
+		}
+		._page_TabUI_Color{
+			/*height: 100%;*/
+			height: auto;
+			width: 100%;
+			padding: 0px;
+			margin: 0px; 
+			overflow: hidden;
+			position:absolute;
+			left:0px;
+			top:0px;
+			opacity:0;
+			/*display:none;*/
+			z-index:0;
+		}
+		._page_TabUI_Color._selectedPage_TabUI_Color{
+			opacity:1;
+			position:relative;
+			float:left;
+			/*display:block;*/
+			z-index:55;
+			min-height: 220px;
+		}
+		._page_TabUI_Color ._mainBox_RectanglesCtrl{
+		    margin-top: 6px;
+		}		
+		._page_TabUI_Color ._main_box_Color{
+		    margin: 5px;
+		}
+		._page_TabUI_Color ._main_box_circleHSV_Color{
+		    margin: 20px 35px 10px 7px !important;
+		}
+		._page_TabUI_Color ._mainbox_container_Cube_Color{
+		    margin-top: 5px;
+			margin-left: 3px;
+		}
+		._page_TabUI_Color ._OverContaineBox_Palette_Color{
+			position:absolute;
+			margin: 0px;
+			width: auto;
+			top: 5px;
+			left:5px;
+			right: 5px;
+			bottom: 3px;
+			padding: 0px;
+			/*border: 2px groove rgba(125,125,125,0.75);
+			box-shadow: rgb(0,0,0,0.65) 0px 2px 5px 0.5px;*/
+			border: 2px groove rgba(125,125,125,0.55);
+			box-shadow: rgb(0,0,0,0.35) 0px 2px 5px 0.5px;
+			border-radius: 5px;
+		}
+		/*._page_TabUI_Color ._ContaineBox_Palette_Color._scrollBox_Palette_Color{
+			 width: auto;
+			left:2px;
+		}*/
+		/*._page_TabUI_Color ._ctrlMainBox_Palette_Color._scrollBox_Palette_Color{
+			padding-right:20px;
+		}*/
