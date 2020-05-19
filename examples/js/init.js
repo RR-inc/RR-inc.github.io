@@ -13,7 +13,7 @@ var loadedDo=function(){
       var pageName=''+window.location.pathname;
       buttSource.innerHTML='<a title="source" href="https://github.com/RR-inc/RR-inc.github.io/edit/master' + pageName + '" target="blank">Source</a>';
       
-			bott.body.appendChild(buttSource);
+			bott.appendChild(buttSource);
       
 			document.body.appendChild(bott);
   }
