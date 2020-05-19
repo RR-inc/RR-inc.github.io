@@ -1,4 +1,4 @@
-if(!Done)Done={status:false};
+var Done=Done||{status:false};
 
 var loadedDo=function(){
   if(!Done.status){
