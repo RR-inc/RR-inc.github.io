@@ -14,6 +14,13 @@ var loadedDo=function(){
       buttSource.innerHTML='<a title="source" href="https://github.com/RR-inc/RR-inc.github.io/edit/master' + pageName + '" target="blank">Source</a>';
       
 			bott.appendChild(buttSource);
+
+
+			var buttHome=document.createElement('div');
+      buttHome.classList.add("button");
+      buttHome.innerHTML='<a title="home" href="https://rr-inc.github.io">&lt;&lt; Home</a>';
+	  
+			bott.appendChild(buttHome);
       
 			document.body.appendChild(bott);
   }
