@@ -11,7 +11,7 @@
     background: linear-gradient(to Bottom, #00000094 0%, #b5b0b094 15%, #00000094 92%, black);
 }
 .button{
-    clear: both;
+    clear: none;
     position: relative;
     float: left;
     opacity: 0.5;
