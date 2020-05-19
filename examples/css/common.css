@@ -1,0 +1,36 @@
+.bottom {
+    position: absolute;
+    float: left;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 6px 10px 9px 10px;
+    color: rgb(100,100,125);
+    border: 2px groove;
+    border-radius: 5px;
+    background: linear-gradient(to Bottom, #00000094 0%, #b5b0b094 15%, #00000094 92%, black);
+}
+.button{
+    clear: both;
+    position: relative;
+    float: left;
+    opacity: 0.5;
+    color: rgb(100,100,125);
+    border: 2px groove;
+    border-radius: 5px;
+    background: linear-gradient(to Bottom, #00000094 0%, #b5b0b094 15%, #00000094 92%, black);
+    box-shadow: black 2px 2px 5px 1px;
+}
+.button>a{
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(32, 32, 41);
+    margin: 0px;
+    padding: 1px 15px;
+}
+.button>a:hover{
+    background-color: rgba(225,225,180,0.7);
+}
+.source{
+    float: right;
+}
