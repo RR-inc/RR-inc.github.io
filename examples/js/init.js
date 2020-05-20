@@ -11,7 +11,7 @@ var loadedDo=function(){
       buttSource.classList.add("button");
       buttSource.classList.add("source");
       var pageName=''+window.location.pathname;
-      buttSource.innerHTML='<a title="source" href="https://github.com/RR-inc/RR-inc.github.io/edit/master' + pageName + '" target="blank">Source</a>';
+      buttSource.innerHTML='<a title="source" href="https://github.com/RR-inc/RR-inc.github.io/tree/master' + pageName + '" target="blank">Source</a>';
       
 			bott.appendChild(buttSource);
 
