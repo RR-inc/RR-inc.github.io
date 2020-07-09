@@ -6915,6 +6915,7 @@ rrColor.getNextUICtrlCounter=function(){
 	rrColor.UICtrlCounter++;
 	return 0+rrColor.UICtrlCounter;
 };
+
 rrColor.createUISlider=function(parent,initialVal){
 	//,onValChange){
 		
@@ -7167,4 +7168,5 @@ rrColor.createUISlider=function(parent,initialVal){
 			_setValue(initialVal);
 			updateView();
 			return objectReturn;	
-};;
+};
+rrColor.REVISION="0.0.1";
