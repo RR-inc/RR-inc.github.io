@@ -148,5 +148,14 @@
 
  <div> 
 	</body>
+
+	<script>
+		var url = new URL(window.location+'');
+		var c = url.searchParams.get('color');
+		if(c!=null){
+			document.body.style.backgroundColor=''+decodeURIComponent(c);
+		}
+	</script>
+
 </html>
 
