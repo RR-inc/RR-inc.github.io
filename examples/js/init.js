@@ -35,13 +35,28 @@ var loadedDo=function(){
 	  menu.appendChild(titl);
 	  
 	  var colors=["white","black"];
+	 var classes=["lightbutt","darkabutt"];
 	  for(var i=0;i<colors.length;i++){
 		var ti=document.createElement('div');
 	    	  ti.classList.add("coltheme"); 
 		  ti.style.background=''+colors[0+i]; 
 		  ti.style.backgroundColor=''+colors[0+i];
+		  ti.index=0+i;
+		  
 		ti.addEventListener('click', function (e) {
-			setBGcolor(this.style.backgroundColor);
+			setBGcolor(colors[0+this.index]);//this.style.backgroundColor);
+			
+			  for(var u=0;u<classes.length;u++){
+				  if(0+u!=0+this.index){
+					  if(bott.classList.contains(classes[u+0])){
+						bott.classList.remove(classes[u+0]);
+					  }
+				  }else{
+				 	 if(!bott.classList.contains(classes[u+0])){
+						bott.classList.add(classes[u+0]);
+					 }
+				  }
+			  }
 			e.preventDefault();
 			e.stopPropagation();
 		}, false);
