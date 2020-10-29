@@ -25,6 +25,31 @@ var loadedDo=function(){
 	  
 			bott.appendChild(buttHome);
       
+			var menu=document.createElement('div');
+      menu.classList.add("themes");
+	  
+	  
+			var titl=document.createElement('div');
+      titl.classList.add("themestitle"); 
+      titl.innerHTML='THEMES:';
+	  menu.appendChild(titl);
+	  
+	  var colors=["white","black"];
+	  for(var i=0;i<colors.length;i++){
+		var ti=document.createElement('div');
+	    	  ti.classList.add("coltheme"); 
+		  ti.style.background=''+colors[0+i]; 
+		  ti.style.backgroundColor=''+colors[0+i];
+		ti.addEventListener('click', function (e) {
+			setBGcolor(this.style.backgroundColor);
+			e.preventDefault();
+			e.stopPropagation();
+		}, false);
+		  menu.appendChild(ti);
+	  }
+	  
+			bott.appendChild(menu);
+	  
 			document.body.appendChild(bott);
 	  
 	  
