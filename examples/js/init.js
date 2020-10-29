@@ -23,6 +23,15 @@ var loadedDo=function(){
 			bott.appendChild(buttHome);
       
 			document.body.appendChild(bott);
+	  
+	  
+		var url = new URL(window.location+'');
+		var c = url.searchParams.get('color');
+		if(c!=null){
+			if(document.body.style==null)document.body.style={}
+			document.body.style.backgroundColor=''+decodeURIComponent(c);
+		}
+	  
   }
 };
 	document.addEventListener('DOMContentLoaded', loadedDo);
