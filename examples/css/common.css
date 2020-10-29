@@ -85,6 +85,7 @@
     clear: none;
     border-radius: 5px;
     box-shadow: black 2px 2px 5px 1px;
+   cursor:pointer;
 }
 
 .darkabutt>.button>a{
