@@ -48,3 +48,38 @@
     position: absolute;
     bottom: 8px;
 }
+.themes{
+   position: relative;
+    float: left;
+    color: #000000;
+    font-family: sans-serif;
+    width: 92px;
+   /* opacity: 0.5;*/
+    border: 2px groove;
+    border-radius: 5px;
+    background: rgba(1,1,1,0.5);
+    box-shadow: #00000091 2px 2px 5px 1px;
+    padding: 5px 5px 10px 5px
+}
+.themestitle{
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 5px;
+    width: 100%;
+    display: inline-block;
+}
+.coltheme{
+       color: rgb(100,100,125);
+    width: 35px;
+    float: left;
+    height: 35px;
+    position: relative;
+    white-space: nowrap;
+    border: 2px groove;
+    margin: 3px;
+    clear: none;
+    border-radius: 5px;
+    box-shadow: black 2px 2px 5px 1px;
+}
