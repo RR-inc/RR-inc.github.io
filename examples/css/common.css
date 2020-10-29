@@ -40,6 +40,8 @@
     height: 100%;
     display: inline-block;
 }
+
+
 .button>a:hover{
     background-color: rgba(225,225,180,0.7);
 }
@@ -83,4 +85,9 @@
     clear: none;
     border-radius: 5px;
     box-shadow: black 2px 2px 5px 1px;
+}
+
+.darkabutt>.button>a{
+rgb(140 140 159)
+   }
 }
