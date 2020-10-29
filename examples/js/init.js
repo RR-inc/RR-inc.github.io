@@ -1,5 +1,8 @@
 var Done=Done||{status:false};
-
+var setBGcolor=function(e){
+	if(document.body.style==null)document.body.style={}
+	document.body.style.backgroundColor=''+e;
+}
 var loadedDo=function(){
   if(!Done.status){
     Done.status=true;
@@ -28,8 +31,7 @@ var loadedDo=function(){
 		var url = new URL(window.location+'');
 		var c = url.searchParams.get('color');
 		if(c!=null){
-			if(document.body.style==null)document.body.style={}
-			document.body.style.backgroundColor=''+decodeURIComponent(c);
+			setBGcolor(''+decodeURIComponent(c));
 		}
 	  
   }
