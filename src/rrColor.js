@@ -357,8 +357,8 @@ rrColor.Color.prototype._s=-1;
 rrColor.Color.prototype._w=-1;
 rrColor.Color.prototype._b=-1;
 
-rrColor.PassiveEventNot = true;
-rrColor.passiveEvent = false;
+rrColor.NotPassiveEvent = false;
+rrColor.passiveEvent = true;
 try {
 	var opts = Object.defineProperty({}, 'passive', {
 		get: function () {
@@ -369,12 +369,10 @@ try {
 } catch (e) { }
 if(rrColor.passiveEvent){
 	rrColor.passiveEvent={ passive: true } 
-	//rrColor.PassiveEventNot={ passive: false } 
-	rrColor.PassiveEventNot={ passive: true } 
+	rrColor.NotPassiveEvent={ passive: false } 
 }else{
 	rrColor.passiveEvent=true;
-	//rrColor.PassiveEventNot=false;
-	rrColor.PassiveEventNot=true;
+	rrColor.NotPassiveEvent=false;
 }
 	
 rrColor.NumericSpinRGB=function(elem,initColor,useTransparency,compact){
@@ -863,6 +861,8 @@ rrColor.FormalSlidersRGBCtrl=function(elem,initColor,useTransparency){
 		}
 	};
 	
+	var SlidFormid=rrColor.getNextUICtrlCounter();
+	
 	var slidR=rrColor.createUISlider(ctrlR,100*__colorIntern.r/255);
 	var slidG=rrColor.createUISlider(ctrlG,100*__colorIntern.g/255);
 	var slidB=rrColor.createUISlider(ctrlB,100*__colorIntern.b/255);
@@ -1042,11 +1042,17 @@ var resetTextNums=function(){
 		},false);
 		
 		numCTRL.addEventListener('touchstart', function (e) {
+			if(rrColor.inSpanUISlider<0){
+				rrColor.inSpanUISlider=SlidFormid;
+			}
 			//e.preventDefault();
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		numCTRL.addEventListener('touchend', function (e) {
+			if(rrColor.inSpanUISlider==SlidFormid){
+				rrColor.inSpanUISlider=-1;
+			}
 			//e.preventDefault();
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		
 		numCTRL.addEventListener('blur', function (e) {
 			this.classList.remove("_inputTxt_inEdit_Color");
@@ -1651,6 +1657,8 @@ var resetTextNums=function(){
 		}
 	};
 	
+	var SlidForid=rrColor.getNextUICtrlCounter();
+	
 		var numCTRL=control;
 		var EvalNumericVal=function(){
 			var valT=0+parseInt(''+numCTRL.value);
@@ -1681,11 +1689,17 @@ var resetTextNums=function(){
 		},false);
 		
 		numCTRL.addEventListener('touchstart', function (e) {
+			if(rrColor.inSpanUISlider<0){
+				rrColor.inSpanUISlider=SlidForid;
+			}
 			//e.preventDefault();
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		numCTRL.addEventListener('touchend', function (e) {
+			if(rrColor.inSpanUISlider==SlidForid){
+				rrColor.inSpanUISlider=-1;
+			}
 			//e.preventDefault();
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		
 		numCTRL.addEventListener('blur', function (e) {
 			this.classList.remove("_inputTxt_inEdit_Color");
@@ -2364,6 +2378,7 @@ var resetTextNums=function(){
 					err=true;
 			}
 		};
+	var SlidForHLSid=rrColor.getNextUICtrlCounter();
 		
 		numCTRL.addEventListener('mousedown', function (e) {
 			e.stopPropagation();
@@ -2373,11 +2388,17 @@ var resetTextNums=function(){
 		},false);
 		
 		numCTRL.addEventListener('touchstart', function (e) {
+			if(rrColor.inSpanUISlider<0){
+				rrColor.inSpanUISlider=SlidForHLSid;
+			}
 			//e.preventDefault();
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		numCTRL.addEventListener('touchend', function (e) {
+			if(rrColor.inSpanUISlider==SlidForHLSid){
+				rrColor.inSpanUISlider=-1;
+			}
 			//e.preventDefault();
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		
 		numCTRL.addEventListener('blur', function (e) {
 			this.classList.remove("_inputTxt_inEdit_Color");
@@ -3197,7 +3218,7 @@ rrColor.CircleHSVCtrl=function(elem, dimCircle,dimVctrl,initColor){
 				_latomove(clientXt,clientYt);
 			clientX=clientXt;
 			clientY=clientYt;
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		ctrlBLat.addEventListener('touchend', function (e) {
 			if(inSpanLato && rrColor.inSpanUISlider==CircleHSVid){ 	
 					_latomove(clientX,clientY);
@@ -3205,7 +3226,7 @@ rrColor.CircleHSVCtrl=function(elem, dimCircle,dimVctrl,initColor){
 				rrColor.inSpanUISlider=-1;
 				}
 				inSpanLato=false;
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		
 		ctrlBLat.addEventListener('touchmove', function (e) {
 				var clientXt = e.touches[0].clientX;
@@ -3331,7 +3352,7 @@ rrColor.CircleHSVCtrl=function(elem, dimCircle,dimVctrl,initColor){
 					//e.preventDefault();
 				rrColor.inSpanUISlider=-1;
 				}
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		ctrlOver.addEventListener('touchstart', function (e) {
 			if(inSpanLato){
 				return;
@@ -3350,7 +3371,7 @@ rrColor.CircleHSVCtrl=function(elem, dimCircle,dimVctrl,initColor){
 					__mmove(clientXt,clientYt);
 				clientX=clientXt;
 				clientY=clientYt;
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		ctrlOver.addEventListener('touchmove', function (e) {
 			if(rrColor.inSpanUISlider==CircleHSVid){
 				var clientXt = e.touches[0].clientX;
@@ -3916,7 +3937,7 @@ rrColor.CircleTriangleCtrl=function(elem, dimCircle,percentCoron,initColor){
 				rrColor.inSpanUISlider=-1;
 				}
 				SpanCorona=false;
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		ctrlOver.addEventListener('touchstart', function (e) {
 			
 			if(rrColor.inSpanUISlider>=0){
@@ -3939,7 +3960,7 @@ rrColor.CircleTriangleCtrl=function(elem, dimCircle,percentCoron,initColor){
 				clientX=clientXt;
 				clientY=clientYt;	
 					}		
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		ctrlOver.addEventListener('touchmove', function (e) {
 			if(rrColor.inSpanUISlider==circleId){
 				var clientXt = e.touches[0].clientX;
@@ -4355,7 +4376,7 @@ rrColor.CubeCtrl=function(elem,initColor){
 						eo.dispatchEvent(newEvt);
 					}
 					}
-			}, rrColor.PassiveEventNot);
+			}, rrColor.PassiveEvent);
 			ctrle.addEventListener('touchstart', function (e) {
 				
 			var clientXt = e.touches[0].clientX;
@@ -4389,7 +4410,7 @@ rrColor.CubeCtrl=function(elem,initColor){
 				//e.preventDefault();
 				clientX=clientXt;
 				clientY=clientYt;
-			}, rrColor.PassiveEventNot);
+			}, rrColor.PassiveEvent);
 		ctrle.addEventListener('touchmove', function (e) {
 			if(rrColor.inSpanUISlider==cubeId){
 				var clientXt = e.touches[0].clientX;
@@ -4783,7 +4804,7 @@ ctrlOver.addEventListener('touchend', function (e) {
 					//e.preventDefault();
 				rrColor.inSpanUISlider=-1;		
 				}		
-		}, rrColor.PassiveEventNot);
+		}, rrColor.PassiveEvent);
 		ctrlOver.addEventListener('touchstart', function (e) {
 				if(rrColor.inSpanUISlider>=0){
 					//e.preventDefault();
@@ -4797,7 +4818,7 @@ ctrlOver.addEventListener('touchend', function (e) {
 					__mkmove(clientXt,clientYt);	
 				clientX=clientXt;
 				clientY=clientYt;
-		}, rrColor.PassiveEventNot);
+		}, rrColor.PassiveEvent);
 		ctrlOver.addEventListener('touchmove', function (e) {
 				if(rrColor.inSpanUISlider==rectId){ 
 			var clientXt = e.touches[0].clientX;
@@ -5066,7 +5087,7 @@ ctrlOver.addEventListener('touchend', function (e) {
 					//e.preventDefault();
 				rrColor.inSpanUISlider=-1;	
 				}
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		ctrlOver.addEventListener('touchstart', function (e) {
 				if(rrColor.inSpanUISlider>=0){
 					//e.preventDefault();
@@ -5079,7 +5100,7 @@ ctrlOver.addEventListener('touchend', function (e) {
 					__mkmove(clientXt,clientYt);	
 				clientX=clientXt;
 				clientY=clientYt;
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		ctrlOver.addEventListener('touchmove', function (e) {
 			if(rrColor.inSpanUISlider==rectIdHS_V){ 	
 				var clientXt = e.touches[0].clientX;
@@ -5350,7 +5371,7 @@ ctrlOver.addEventListener('touchend', function (e) {
 					//e.preventDefault();
 				rrColor.inSpanUISlider=-1;
 				}	
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		ctrlOver.addEventListener('touchstart', function (e) {
 				if(rrColor.inSpanUISlider>=0){
 					//e.preventDefault();
@@ -5363,7 +5384,7 @@ ctrlOver.addEventListener('touchend', function (e) {
 					__mkmove(clientXt,clientYt);
 				clientX=clientXt;
 				clientY=clientYt;
-		},rrColor.PassiveEventNot);
+		},rrColor.PassiveEvent);
 		ctrlOver.addEventListener('touchmove', function (e) {
 				if(rrColor.inSpanUISlider==rectIdSV_H){ 
 				var clientXt = e.touches[0].clientX;
@@ -6159,7 +6180,7 @@ ctrlOver.addEventListener('touchend', function (e) {
 			//	inSpan=false;
 				SpanCorona=false;
 				this.style.cursor='default';
-		}, rrColor.PassiveEventNot);
+		}, rrColor.PassiveEvent);
 		ctrlOver.addEventListener('touchstart', function (e) {
 			if(rrColor.inSpanUISlider>=0){
 				if(rrColor.inSpanUISlider==cylinderId){ 	
@@ -6191,7 +6212,7 @@ ctrlOver.addEventListener('touchend', function (e) {
 				clientX=clientXt;
 				clientY=clientYt;
 					}		
-		}, rrColor.PassiveEventNot);
+		}, rrColor.PassiveEvent);
 		ctrlOver.addEventListener('touchmove', function (e) {
 			if(rrColor.inSpanUISlider==cylinderId){ 	
 				this.style.cursor=(SpanCorona)?'pointer':"crosshair";
@@ -7057,10 +7078,20 @@ rrColor.SlidersUICtrl=function(parent,initColor,useTransp){
 	
 	parent.appendChild(MainBox);
 	
+	var SlidUIid=rrColor.getNextUICtrlCounter();
 
-	MainBox.addEventListener('touchstart', function (e) {
+	MainBox.addEventListener('touchend', function (e) {
+			if(rrColor.inSpanUISlider==SlidUIid){
+				rrColor.inSpanUISlider=-1;
+			}
 		//e.preventDefault();
-	}, rrColor.PassiveEventNot);
+	}, rrColor.PassiveEvent);
+	MainBox.addEventListener('touchstart', function (e) {
+			if(rrColor.inSpanUISlider<0){
+				rrColor.inSpanUISlider=SlidUIid;
+			}
+		//e.preventDefault();
+	}, rrColor.PassiveEvent);
 	MainBox.addEventListener('touchmove', function (e) {
 		//e.preventDefault();
 	}, rrColor.passiveEvent);
@@ -7189,7 +7220,7 @@ rrColor.TabUICtrl=function(parent,initColor,initSelectedTab){
 
 	/*MainBox.addEventListener('touchstart', function (e) {
 		e.preventDefault();
-	}, rrColor.PassiveEventNot);*/
+	}, rrColor.PassiveEvent);*/
 	MainBox.addEventListener('touchmove', function (e) {
 		//e.preventDefault();
 	}, rrColor.passiveEvent);
@@ -7515,6 +7546,19 @@ rrColor.createUINumericSpin=function(elem,initValue,compact,max,min){
 
 rrColor.UICtrlCounter=0;
 rrColor.inSpanUISlider=-1;
+rrColor.touchstartHandlerForScroll=function(e){
+	if(rrColor.inSpanUISlider!=-1){
+	 document.body.classList.add("stop-scrolling_for_Color");
+	}else{
+	 document.body.classList.remove("stop-scrolling_for_Color");
+	}
+};
+rrColor.touchendHandlerForScroll=function(e){
+	 document.body.classList.remove("stop-scrolling_for_Color");
+};
+document.addEventListener('touchstart', rrColor.touchstartHandlerForScroll, {passive: false});
+document.addEventListener('touchend', rrColor.touchendHandlerForScroll, {passive: false});
+
 rrColor.getNextUICtrlCounter=function(){
 	rrColor.UICtrlCounter++;
 	return 0+rrColor.UICtrlCounter;
@@ -7652,7 +7696,7 @@ rrColor.createUISlider=function(parent,initialVal){
 								if(fact>1)fact=1;
 								return fact;
 								
-						return -1;
+					//	return -1;
 			};
 			var _mmove=function(x,y){
 				if(x==undefined)return;
@@ -7688,7 +7732,7 @@ ctrlBox.addEventListener('touchend', function (e) {
 						objectReturn.onMouseUp(Value);
 					}
 				}
-		}, rrColor.PassiveEventNot);
+		}, rrColor.PassiveEvent);
 		ctrlBox.addEventListener('touchstart', function (e) {
 			if(rrColor.inSpanUISlider>=0){
 				if(rrColor.inSpanUISlider==sliderId){
@@ -7722,7 +7766,7 @@ ctrlBox.addEventListener('touchend', function (e) {
 			if(objectReturn.onMouseDown!=null && typeof(objectReturn.onMouseDown)=='function' ){
 				objectReturn.onMouseDown(Value);
 			}
-		}, rrColor.PassiveEventNot);
+		}, rrColor.PassiveEvent);
 		ctrlBox.addEventListener('touchmove', function (e) {
 			if(rrColor.inSpanUISlider==sliderId){
 				var clientXt = e.touches[0].clientX;

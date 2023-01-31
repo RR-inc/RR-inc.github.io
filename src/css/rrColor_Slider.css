@@ -140,3 +140,9 @@
 			background: linear-gradient(to right top,#464646 44%, gray 45%, gray 55%,#464646 56%);
 		}
 		 /*  helpers slider */
+.stop-scrolling_for_Color {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	overscroll-behavior-y: contain;
+}
