@@ -3169,7 +3169,7 @@ rrColor.CircleHSVCtrl=function(elem, dimCircle,dimVctrl,initColor){
 				if(!e)e=window.event;
 				var x=e.clientX;
 				var y=e.clientY;
-				__inLato(x,y);
+				return __inLato(x,y);
 			};
 			
 		
@@ -3191,6 +3191,7 @@ rrColor.CircleHSVCtrl=function(elem, dimCircle,dimVctrl,initColor){
 			if(!__inLato(clientXt,clientYt)){
 				return;
 			}
+					rrColor.inSpanUISlider=CircleHSVid;
 			inSpanLato=true;
 			this.style.cursor='crosshair';		
 				_latomove(clientXt,clientYt);
@@ -3272,6 +3273,7 @@ rrColor.CircleHSVCtrl=function(elem, dimCircle,dimVctrl,initColor){
 					}catch(idso){
 						console.error(idso);
 					}
+					//rrColor.inSpanUISlider=CircleHSVid;
 					inSpanLato=true;
 					this.style.cursor='crosshair';		
 						latomove(e);
