@@ -3199,9 +3199,10 @@ rrColor.CircleHSVCtrl=function(elem, dimCircle,dimVctrl,initColor){
 			clientY=clientYt;
 		},rrColor.PassiveEventNot);
 		ctrlBLat.addEventListener('touchend', function (e) {
-				if(inSpanLato){ 					
+			if(inSpanLato && rrColor.inSpanUISlider==CircleHSVid){ 	
 					_latomove(clientX,clientY);
 				//	e.preventDefault();
+				rrColor.inSpanUISlider=-1;
 				}
 				inSpanLato=false;
 		},rrColor.PassiveEventNot);
@@ -3209,7 +3210,7 @@ rrColor.CircleHSVCtrl=function(elem, dimCircle,dimVctrl,initColor){
 		ctrlBLat.addEventListener('touchmove', function (e) {
 				var clientXt = e.touches[0].clientX;
 				var clientYt = e.touches[0].clientY;
-			if(inSpanLato){
+			if(inSpanLato && rrColor.inSpanUISlider==CircleHSVid){ 	
 				_latomove(clientXt,clientYt);
 				this.style.cursor="crosshair";
 				//e.preventDefault();
@@ -3225,12 +3226,13 @@ rrColor.CircleHSVCtrl=function(elem, dimCircle,dimVctrl,initColor){
 		},rrColor.passiveEvent);
 			
 		ctrlBLat.addEventListener('mouseup', function (e) {
-				if(inSpanLato){ 					
+				if(inSpanLato && rrColor.inSpanUISlider==CircleHSVid){ 					
 					latomove(e);
 					document.onmousemove=eio;
 					document.onmouseup=eioUp;
 					e.preventDefault();
 					e.stopPropagation();
+				rrColor.inSpanUISlider=-1;
 				}
 				inSpanLato=false;
 		}, false);
@@ -3261,10 +3263,11 @@ rrColor.CircleHSVCtrl=function(elem, dimCircle,dimVctrl,initColor){
 					try{
 						var eipo=this;
 						document.onmouseup=function (w){
-							if(inSpanLato){ 	
+							if(inSpanLato && rrColor.inSpanUISlider==CircleHSVid){ 	
 								latomove(w);
 								document.onmousemove=eio;
 								document.onmouseup=eioUp;
+								rrColor.inSpanUISlider=-1;
 							}
 							inSpanLato=false;
 				w.preventDefault();
@@ -3273,6 +3276,7 @@ rrColor.CircleHSVCtrl=function(elem, dimCircle,dimVctrl,initColor){
 					}catch(idso){
 						console.error(idso);
 					}
+					rrColor.inSpanUISlider=CircleHSVid;
 					//rrColor.inSpanUISlider=CircleHSVid;
 					inSpanLato=true;
 					this.style.cursor='crosshair';		
@@ -3282,7 +3286,7 @@ rrColor.CircleHSVCtrl=function(elem, dimCircle,dimVctrl,initColor){
 			
 		}, false);
 		ctrlBLat.addEventListener('mousemove', function (e) {	
-			if(inSpanLato){
+			if(inSpanLato && rrColor.inSpanUISlider==CircleHSVid){
 				latomove(e);
 				this.style.cursor="crosshair";
 				e.preventDefault();
@@ -3915,6 +3919,9 @@ rrColor.CircleTriangleCtrl=function(elem, dimCircle,percentCoron,initColor){
 		},rrColor.PassiveEventNot);
 		ctrlOver.addEventListener('touchstart', function (e) {
 			
+			if(rrColor.inSpanUISlider>=0){
+				return;
+			}
 			if(rrColor.inSpanUISlider==circleId){
 				this.style.cursor='crosshair';
 				return;
@@ -3965,6 +3972,9 @@ rrColor.CircleTriangleCtrl=function(elem, dimCircle,percentCoron,initColor){
 		}, false);
 				
 		ctrlOver.addEventListener('mousedown', function (e) {
+			if(rrColor.inSpanUISlider>=0){
+				return;
+			}
 			if(rrColor.inSpanUISlider==circleId){
 				this.style.cursor='crosshair';
 				return;
@@ -4419,6 +4429,9 @@ rrColor.CubeCtrl=function(elem,initColor){
 			}, false);
 			
 		ctrle.addEventListener('mousedown', function (e) {
+			if(rrColor.inSpanUISlider>=0){
+				return;
+			}
 			if(rrColor.inSpanUISlider==cubeId){
 				return;
 			}
